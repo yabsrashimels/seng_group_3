@@ -1,0 +1,11 @@
+What does git add do?
+What is the use of -u (setting the upstream)?
+o What is a commit?
+o What is git pull?
+o What is a branch?
+o What is a merge conflict?
+o Write command to clone remote repository
+o Write command to connect your local repository to remote repository
+o Write command to push your local repository latest commits to remote
+repository (for the first time)
+o Write command to pull updated changes from remote repository
