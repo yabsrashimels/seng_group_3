@@ -1,8 +1,9 @@
-Group Members                              ID NUMBER                                                          ID NUMBER
-1. Kibrealem Gebretnsae             UGR/ 188315/16 
-2. Kokob Hailay                     UGR/ 188347/16 
-3. Tesfay Nguse                    UGR/ 188737/16 
-4. Awet Teklay                     UGR/ 187896/16 
-5. Yeabsra shimels			     Ugr /188803/16
-6. Rebyu Dejene                    Ugr/188592/16
-7. Rahel Tewelde                  Ugr/188587/16
+Group Members                          ID NUMBER                            
+1. Kibrealem Gebretnsae             ugr/ 188315/16 
+2. Kokob Hailay                     ugr/ 188347/16 
+3. Tesfay Nguse                     ugr/ 188737/16 
+4. Awet Teklay                      ugr/ 187896/16 
+5. Yeabsra shimels			            Ugr/ 188803/16
+6. Rebyu Dejene                     Ugr/ 188592/16
+7. Adyam weldu                      ugr/ 187826/16
+8.Biruk Hiluf                       Ugr/ 187954/16
