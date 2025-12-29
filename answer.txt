@@ -1,0 +1,193 @@
+GIT BASICS – INTERACTIVE NOTES
+
+
+1. What does git add do?
+--------------------------------------------------
+The `git add` command stages changes from your working directory
+for the next commit. It moves selected file changes into the
+staging area (index).
+
+Key points:
+- Starts tracking new files
+- Stages changes in modified files
+- Does NOT create a commit
+
+Common usage:
+git add <file>        → Stage a specific file
+git add .             → Stage all changes in current directory
+git add -A            → Stage all changes including deletions
+git add -p            → Interactively stage parts of files
+
+Use `git status` to check staged vs unstaged files.
+
+
+2. What is the use of -u (set upstream)?
+--------------------------------------------------
+The `-u` or `--set-upstream` option is commonly used with `git push`.
+
+Command:
+git push -u origin <branch-name>
+
+What it does:
+- Pushes your local branch to the remote repository
+- Links the local branch with the remote branch
+
+Benefits:
+- Allows using `git push` and `git pull` without arguments
+- Shows ahead/behind info in `git status`
+- View tracking branches using:
+  git branch -vv
+
+Example:
+git push -u origin feature-x
+
+Manual upstream setup:
+git branch --set-upstream-to=origin/<branch-name>
+
+
+3. What is a commit?
+--------------------------------------------------
+A commit is a snapshot of your project at a specific point in time.
+
+Each commit includes:
+- A unique hash ID
+- A commit message
+- Author and timestamp
+
+Workflow:
+1. Edit files
+2. Stage changes: git add
+3. Save snapshot: git commit -m "message"
+4. Share changes: git push
+
+Good commits are small, focused, and clearly described.
+
+
+4. What is git pull?
+--------------------------------------------------
+`git pull` updates your local branch with changes from a remote
+repository.
+
+It does two things:
+1. git fetch  → Downloads new commits
+2. git merge  → Merges them into current branch
+
+Commands:
+git pull
+git pull origin main
+git pull --rebase
+
+Difference from git fetch:
+- fetch downloads changes only
+- pull fetches + merges automatically
+
+Always commit or stash local changes before pulling.
+
+
+5. What is a branch?
+--------------------------------------------------
+A branch is a parallel version of the repository.
+
+Key concepts:
+- Default branch is usually `main`
+- Branches allow isolated development
+- Used for features, bug fixes, experiments
+
+Example workflow:
+- Create branch: feature/login-page
+- Commit changes
+- Open pull request
+- Merge into main
+- Delete feature branch
+
+Branches enable safe collaboration and clean history.
+
+
+6. What is a merge conflict?
+--------------------------------------------------
+A merge conflict happens when Git cannot automatically combine
+changes from two branches.
+
+Causes:
+- Same file edited in same lines
+- Conflicting changes between branches
+
+Conflict markers:
+<<<<<<< HEAD
+=======
+>>>>>>>
+
+Steps to resolve:
+1. Open the conflicted file
+2. Choose correct changes
+3. Remove conflict markers
+4. Stage file: git add <file>
+5. Commit: git commit
+
+Avoid conflicts by pulling often and keeping branches small.
+
+
+7. Command to clone a remote repository
+--------------------------------------------------
+Basic command:
+git clone https://github.com/username/repository-name.git
+
+Options:
+Clone into custom folder:
+git clone <url> my-folder
+
+Clone specific branch:
+git clone -b branch-name <url>
+
+Shallow clone:
+git clone --depth 1 <url>
+
+
+8. Command to connect local repo to remote repo
+--------------------------------------------------
+Add remote repository:
+git remote add origin https://github.com/username/repository-name.git
+
+Verify remote:
+git remote -v
+
+Push and set upstream:
+git push -u origin main
+
+
+9. First-time push to remote repository
+--------------------------------------------------
+Command:
+git push -u origin main
+
+Explanation:
+- Pushes commits to remote
+- Sets upstream tracking
+- Simplifies future push/pull
+
+After this:
+git push
+
+
+10. Command to pull latest changes from remote
+--------------------------------------------------
+Basic command:
+git pull
+
+Explicit command:
+git pull origin main
+
+Rebase instead of merge:
+git pull --rebase
+
+Fetch only:
+git fetch
+git merge origin/main
+
+If conflicts occur:
+- Resolve files
+- git add <file>
+- git commit
+
+
+END OF NOTES
